@@ -1,5 +1,8 @@
 ---
 title: "PA1_template.Rmd"
+output:
+  html_document:
+    keep_md: yes
 ---
 #This report shows the analysis of the activity monitor data with steps, date and interval.
 
@@ -11,6 +14,7 @@ library(reshape2)
 ##Part1
 Load the data and change date to Date format:
 ```{r}
+unzip("activity.zip")
 data <- read.csv("activity.csv")
 data$date <- as.Date(data$date)
 ```
